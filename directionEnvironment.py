@@ -76,7 +76,6 @@ class Env:
 
 
 
-
 if __name__ == '__main__':
     env = Env(world_size=5, agent_loc='center')
 
