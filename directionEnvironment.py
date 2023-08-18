@@ -1,5 +1,5 @@
 import random
-
+ 
 
 class Env:
     '''
@@ -72,18 +72,3 @@ class Env:
         else:
             raise Exception("\'agent_loc\' must be \'random\', \'center\'")
         return agent_loc_, goal_loc_
-
-
-
-
-if __name__ == '__main__':
-    env = Env(world_size=5, agent_loc='center')
-
-    is_done = False
-    while not is_done:
-        goal_loc, agent_loc = env.get_state()
-        print(goal_loc, agent_loc)
-
-        act = random.randint(0, 1)
-        is_done, reward = env.action(act)
-        print(f'is done: {is_done}, reward: {reward}')
